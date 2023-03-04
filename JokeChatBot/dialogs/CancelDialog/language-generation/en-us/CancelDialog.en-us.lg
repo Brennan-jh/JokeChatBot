@@ -1,0 +1,27 @@
+[import](common.lg)
+
+# ConfirmInput_Prompt_PxLQhP()
+[Activity
+    Text = ${ConfirmInput_Prompt_PxLQhP_text()}
+]
+
+# ConfirmInput_Prompt_PxLQhP_text()
+- Are you sure you would like to cancel?
+- Do you want to cancel?
+- I will cancel, are you sure you want to cancel?
+# SendActivity_l9MLa3()
+[Activity
+    Text = ${SendActivity_l9MLa3_text()}
+]
+
+# SendActivity_l9MLa3_text()
+- Ok. No problem I will cancel this for you.
+# SendActivity_JajNSn()
+[Activity
+    Text = ${SendActivity_JajNSn_text()}
+]
+
+# SendActivity_JajNSn_text()
+- Ok. I will continue.
+- Ok. I will move on.
+- I will continue then.

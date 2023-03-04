@@ -1,0 +1,76 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "gnVycj",
+    "name": "CancelDialog",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "AUNiMC"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "PxLQhP"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${ConfirmInput_Prompt_PxLQhP()}",
+          "choiceOptions": {
+            "includeNumbers": true
+          },
+          "property": "dialog.cancelConfirmed"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "zeDhQU"
+          },
+          "condition": "=dialog.cancelConfirmed",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "l9MLa3"
+              },
+              "activity": "${SendActivity_l9MLa3()}"
+            },
+            {
+              "$kind": "Microsoft.CancelAllDialogs",
+              "$designer": {
+                "id": "4L6D6r"
+              },
+              "activityProcessed": true
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "JajNSn"
+              },
+              "activity": "${SendActivity_JajNSn()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "CancelDialog.lg",
+  "recognizer": "CancelDialog.lu.qna",
+  "id": "CancelDialog"
+}

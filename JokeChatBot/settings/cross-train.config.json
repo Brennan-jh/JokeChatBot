@@ -1,0 +1,13 @@
+{
+  "JokeChatBot.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "Joke": [
+        "GetJoke.en-us"
+      ],
+      "Cancel": [
+        "CancelDialog.en-us"
+      ]
+    }
+  }
+}

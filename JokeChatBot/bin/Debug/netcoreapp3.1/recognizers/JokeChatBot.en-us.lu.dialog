@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.LuisRecognizer",
+  "id": "LUIS_JokeChatBot",
+  "applicationId": "=settings.luis.JokeChatBot_en_us_lu.appId",
+  "version": "=settings.luis.JokeChatBot_en_us_lu.version",
+  "endpoint": "=settings.luis.endpoint",
+  "endpointKey": "=settings.luis.endpointKey"
+}

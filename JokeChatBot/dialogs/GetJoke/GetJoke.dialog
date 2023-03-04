@@ -1,0 +1,90 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "uXUb8A",
+    "name": "GetJoke",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "6Hu8mw"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "QCRXRv"
+          },
+          "activity": "${SendActivity_QCRXRv()}"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "JpUoll"
+          },
+          "method": "GET",
+          "url": "https://api.chucknorris.io/jokes/random",
+          "resultProperty": "dialog.api_response",
+          "responseType": "json"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "qjXR25"
+          },
+          "actions": [
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "tBhLlD"
+              },
+              "assignments": [
+                {
+                  "property": "dialog.value",
+                  "value": "=dialog.api_response.content.value"
+                },
+                {
+                  "property": "dialog.icon_url",
+                  "value": "=dialog.api_response.content.icon_url"
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "w3Yqvt"
+              },
+              "activity": "${SendActivity_w3Yqvt()}"
+            }
+          ],
+          "condition": "=dialog.api_response.statusCode == 200",
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "1gFOwp"
+              },
+              "activity": "${SendActivity_1gFOwp()}"
+            },
+            {
+              "$kind": "Microsoft.DeleteProperty",
+              "$designer": {
+                "id": "6wSh7j"
+              },
+              "property": "user.joke"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "GetJoke.lg",
+  "recognizer": "GetJoke.lu.qna",
+  "id": "GetJoke"
+}

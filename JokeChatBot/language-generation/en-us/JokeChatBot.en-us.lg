@@ -1,0 +1,16 @@
+[import](common.lg)
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# SendActivity_kBTyR7()
+[Activity
+    Text = ${SendActivity_kBTyR7_text()}
+]
+
+# SendActivity_kBTyR7_text()
+- Hello, Welcome to Joke Chat Bot, Wana hear joke?

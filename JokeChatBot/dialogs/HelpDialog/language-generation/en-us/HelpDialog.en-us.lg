@@ -1,0 +1,11 @@
+[import](common.lg)
+
+# SendActivity_Fdndzn()
+[Activity
+    Text = ${SendActivity_Fdndzn_text()}
+]
+
+# SendActivity_Fdndzn_text()
+- Joke is here to help.
+- I'm a bot with small requests.
+- I can help you with small questions.

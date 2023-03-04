@@ -1,0 +1,27 @@
+[import](common.lg)
+
+# SendActivity_QCRXRv()
+[Activity
+    Text = ${SendActivity_QCRXRv_text()}
+]
+
+# SendActivity_QCRXRv_text()
+- This will be the best joke that you will ever hear.
+# SendActivity_1gFOwp()
+[Activity
+    Text = ${SendActivity_1gFOwp_text()}
+]
+
+# SendActivity_1gFOwp_text()
+- Something malfunctioned: ${dialog.api_response.content.message}.
+# SendActivity_w3Yqvt()
+[Activity
+    Attachments = ${SendActivity_w3Yqvt_attachment_0iXFMl()}
+]
+
+# SendActivity_w3Yqvt_attachment_0iXFMl()
+[HeroCard
+  title = Joke
+  text = ${dialog.value}
+  images = ${dialog.icon_url}
+]

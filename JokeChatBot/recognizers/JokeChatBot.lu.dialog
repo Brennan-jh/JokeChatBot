@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_JokeChatBot",
+  "recognizers": {
+    "en-us": "JokeChatBot.en-us.lu",
+    "": "JokeChatBot.en-us.lu"
+  }
+}
